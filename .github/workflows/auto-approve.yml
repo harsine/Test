@@ -27,6 +27,7 @@ jobs:
           else
             CONFIG='{"approveDependabot":true,"approveLabels":[],"approveAuthors":["dependabot[bot]"],"approveFilesOnly":[]}'
           fi
+          CONFIG="${CONFIG//$'\n'/}"
           echo "config=$CONFIG" >> $GITHUB_OUTPUT
 
       - name: Check if PR should be approved
