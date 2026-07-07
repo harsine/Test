@@ -23,7 +23,7 @@ jobs:
         id: config
         run: |
           if [ -f "auto-approve-config.json" ]; then
-            CONFIG=$(cat auto-approve-config.json)
+            CONFIG=$(cat auto-approve-config.json | tr -d '\n' | tr -d '\r')
           else
             CONFIG='{"approveDependabot":true,"approveLabels":[],"approveAuthors":["dependabot[bot]"],"approveFilesOnly":[]}'
           fi
