@@ -1,0 +1,17 @@
+{
+  "approveDependabot": true,
+  "approveLabels": [
+    "auto-approve",
+    "documentation",
+    "dependencies"
+  ],
+  "approveAuthors": [
+    "dependabot[bot]",
+    "your-bot-name"
+  ],
+  "approveFilesOnly": [
+    "README.md",
+    "docs/**",
+    "*.md"
+  ]
+}

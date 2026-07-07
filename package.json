@@ -1,0 +1,26 @@
+{
+  "name": "github-pr-autoapprove",
+  "version": "1.0.0",
+  "description": "Automatically approve GitHub pull requests based on configurable rules",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/test.js"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "pull-request",
+    "automation",
+    "approval"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^19.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
