@@ -23,10 +23,11 @@ jobs:
         id: config
         run: |
           if [ -f "auto-approve-config.json" ]; then
-            CONFIG=$(cat auto-approve-config.json | tr -d '\n' | tr -d '\r')
+            CONFIG=$(cat auto-approve-config.json)
           else
             CONFIG='{"approveDependabot":true,"approveLabels":[],"approveAuthors":["dependabot[bot]"],"approveFilesOnly":[]}'
           fi
+          CONFIG="${CONFIG//$'\n'/}"
           echo "config=$CONFIG" >> $GITHUB_OUTPUT
 
       - name: Check if PR should be approved
